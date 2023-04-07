@@ -27,7 +27,7 @@ interface Props {
 }
 
 
-const mainHeader: React.FC<Props> = ({ fixedHeight }): JSX.Element => {
+const MainHeader: React.FC<Props> = ({ fixedHeight }): JSX.Element => {
     const [fixHeader, setFixeHeader] = useState<boolean>();
     const [openMenu, setOpenMenu] = useState<boolean>(false);
     const [uploadModel, setUploadModel] = useState<boolean>(false);
@@ -103,4 +103,4 @@ const mainHeader: React.FC<Props> = ({ fixedHeight }): JSX.Element => {
     )
 }
 
-export default mainHeader
+export default MainHeader

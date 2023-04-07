@@ -170,8 +170,9 @@ export const Register = () => {
     return <section className='flex flex-col md:flex-row w-full items-center md:items-start gap-3 justify-center'>
         <div className="mt-5 sm:mt-24  border bg-white mx-2 w-full sm:w-[38rem]  sm:h-[20rem] pt-5">
             <form action="" className="w-fuell p-4">
-                {RegisterFormCol1.inputs.map((input: Input) => {
+                {RegisterFormCol1.inputs.map((input: Input, index: number) => {
                     return (<AnimatedInput
+                        key={index}
                         errorMessage={input.errorMessage}
                         value={input.value}
                         valid={input.valid}
@@ -184,8 +185,9 @@ export const Register = () => {
 
 
                 <div className="w-full sm:flex gap-2 mt-3 text-[14px]">
-                    {RgsiterFormCol2.inputs.map((input: Input) => {
+                    {RgsiterFormCol2.inputs.map((input: Input, index: number) => {
                         return (<AnimatedInput
+                            key={index}
                             errorMessage={input.errorMessage}
                             value={input.value}
                             valid={input.valid}
