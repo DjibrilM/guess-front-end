@@ -84,10 +84,13 @@ const MainHeader: React.FC<Props> = ({ fixedHeight }): JSX.Element => {
                             }
                         </div>
 
-                        <button className="text-white sm:flex items-center justify-center gap-1   sm:gap-2 bg-global-0 h-10 sm:px-7 px-2 text-sm hidden ml-3">
-                            <BiMessageSquareDetail className="" />
-                            logout
-                        </button>
+
+                        <Link href="login">
+                            <button className="text-white sm:flex items-center justify-center gap-1   sm:gap-2 bg-global-0 h-10 sm:px-7 px-2 text-sm hidden ml-3">
+                                <BiMessageSquareDetail className="" />
+                                Login
+                            </button>
+                        </Link>
                     </div>
 
                     <div className="md:hidden cursor-pointer relative z-[1000]" onClick={() => {

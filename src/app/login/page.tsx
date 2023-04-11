@@ -11,9 +11,9 @@ const globalFonts = Lexend_Exa({
 
 export default function Home() {
   return (
-    <main className={`${globalFonts.className}  h-full w-full`}>
-      <Header linkText='Rgister' link='/' />
+    <section className={`${globalFonts.className}  min-h-screen w-full bg-[#e2e2e2]`}>
+      <Header linkText='register' link='/register' />
       <Login />
-    </main>
+    </section>
   )
 }

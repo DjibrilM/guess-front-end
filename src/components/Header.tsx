@@ -27,7 +27,7 @@ const Header: React.FC<Props> = ({ link, linkText }) => {
                 <Image priority src={logo} alt="logo" className="w-10 sm:w-16 hover:rotate-[500deg] duration-[1s] cursor-pointer" />
                 <h1 className={`${logoFont.className}  text-2xl text-gray-700`}>Guess</h1>
             </div>
-            <Link className="mr-3 sm:mr-8  px-10 rounded-sm py-3 bg-global-0 text-white" href={link}>{linkText}</Link>
+            <Link className="mr-3 sm:mr-8 min-w-[150px] flex items-center justify-center  rounded-sm py-3 bg-global-0 text-white" href={link}>{linkText}</Link>
         </div>
     </header>;
 };

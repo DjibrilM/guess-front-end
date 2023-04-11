@@ -16,22 +16,23 @@ const firebaseConfig = {
 
 
 const app = initializeApp(firebaseConfig);
-const provider = new GoogleAuthProvider();
-provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
-const auth = getAuth(app);
+export const provider = new GoogleAuthProvider();
+export const auth = getAuth(app);
 auth.languageCode = 'it';
-export const signinWithPopup = () => {
+
+export const signinWithPopup = (loginResult: Function, loginError: Function) => {
     signInWithPopup(auth, provider)
         .then((result) => {
             const credential: any = GoogleAuthProvider.credentialFromResult(result);
             const token = credential.accessToken;
             const user = result.user;
-            console.log(user);
+            loginResult(user);
         }).catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
             const email = error.customData.email;
             const credential = GoogleAuthProvider.credentialFromError(error);
+            loginError(error);
             // ...
         });
 

@@ -31,7 +31,7 @@ const SearchInput = () => {
                 <ImSearch className="text-gray-400" />
             </div>
             {searchResult &&
-                <div className="w-[100.2%] border-r border-l z-50 absolute pb-5 border-t border-t-[#00000020] bg-white top-[2.78rem] right-[-0.2px]">
+                <div className="w-[100.2%] shadow-md border-r border-l z-50 absolute pb-5 border-t border-t-[#00000020] bg-white top-[2.78rem] right-[-0.2px]">
                     <div className="h-[18rem]  w-full">
                     </div>
 
